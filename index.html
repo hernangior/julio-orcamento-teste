@@ -61,7 +61,7 @@
       <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
       <h2>Budget Test</h2>
 	  <div id="div_deploy_data">
-		 &nbsp; - Deploy date: 16/06/2023 13:10 - forEach
+		 &nbsp; - Deploy date: 16/06/2023 13:12 - item details
 	  </div>
       <p class="lead">Feature presentation feature, under development, just for quick testing. Google Sheets - for storing and querying the data</p>
     </div>
@@ -261,7 +261,8 @@
 			  //console.table(array_list);
 			
 			  array_list.forEach((item) => {
-				console.log(item);
+				var item_list = item.split(",");
+				console.table(item_list);
 			  });
 			  
 			  document.getElementById("ajax_result").innerText = data
