@@ -61,7 +61,7 @@
       <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
       <h2>Budget Test</h2>
 	  <div id="div_deploy_data">
-		 &nbsp; - Deploy date: 16/06/2023 13:21 - item details
+		 &nbsp; - Deploy date: 16/06/2023 13:21 - second loop
 	  </div>
       <p class="lead">Feature presentation feature, under development, just for quick testing. Google Sheets - for storing and querying the data</p>
     </div>
@@ -245,9 +245,8 @@
 		function getData(){
 		
 			$.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vTmm0nPchYTIJ8_FaRiUVgRXb0a9Sy0jTMWFGfs_F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/pub?gid=0&single=true&output=csv", 
-			let i = 1;
 			function(data, status){
-			  console.log("# line "+i+" ... ");i++;
+			  let i = 1;	
 			  // get all data, separated in lines
 			  var array_list = data.split("\r\n");
 			  // search line by line e breaks fields
