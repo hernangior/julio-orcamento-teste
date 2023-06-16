@@ -243,16 +243,14 @@
 		
 			$.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vTmm0nPchYTIJ8_FaRiUVgRXb0a9Sy0jTMWFGfs_F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/pub?gid=0&single=true&output=csv", 
 			function(data, status){
-			
-				
-			
+
 			  console.log("# original value: ");
 			  console.log(data);
 			  console.log("# original value in table: ");
 			  console.table(data);
 			  console.log("# value in JSON");
 			  console.log(JSON.stringify(data));
-			  console.log("size: "+data.length):
+			  console.log("size: "+data.length);
 			
 			  //alert("Data: " + data + "\nStatus: " + status);
 			  
