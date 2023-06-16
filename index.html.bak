@@ -61,7 +61,7 @@
       <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
       <h2>Budget Test</h2>
 	  <div id="div_deploy_data">
-		 &nbsp; - Deploy date: 16/06/2023 13:21 - second loop
+		 &nbsp; - Deploy date: 16/06/2023 13:46 - index corrige
 	  </div>
       <p class="lead">Feature presentation feature, under development, just for quick testing. Google Sheets - for storing and querying the data</p>
     </div>
@@ -251,7 +251,7 @@
 			  var array_list = data.split("\r\n");
 			  // search line by line e breaks fields
 			  array_list.forEach((item) => {
-			    console.log("# line "+i+" ... ");i++;
+			    console.log("# line "+i+"___________________________________________________________________________________");i++;
 			    // when the fields are breakeds
 				var item_list = item.split(",");
 				item_list.forEach((item_) => {
