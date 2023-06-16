@@ -59,7 +59,10 @@
   <main>
     <div class="py-5 text-center">
       <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-      <h2>Budget Test - Deplo data: 16/06/2023 12:56 - split</h2>
+      <h2>Budget Test</h2>
+	  <div id="div_deploy_data">
+		 &nbsp; - Deploy date: 16/06/2023 13:10 - forEach
+	  </div>
       <p class="lead">Feature presentation feature, under development, just for quick testing. Google Sheets - for storing and querying the data</p>
     </div>
 
@@ -243,7 +246,8 @@
 		
 			$.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vTmm0nPchYTIJ8_FaRiUVgRXb0a9Sy0jTMWFGfs_F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/pub?gid=0&single=true&output=csv", 
 			function(data, status){
-
+			
+			  //alert("Data: " + data + "\nStatus: " + status);
 			  console.log("# original value: ");
 			  console.log(data);
 			  console.log("# original value in table: ");
@@ -254,9 +258,11 @@
 			  console.log("#array: ");
 			  
 			  var array_list = data.split("\r\n");
-			  console.table(array_list);
+			  //console.table(array_list);
 			
-			  //alert("Data: " + data + "\nStatus: " + status);
+			  array_list.forEach((item) => {
+				console.log(item);
+			  });
 			  
 			  document.getElementById("ajax_result").innerText = data
 			  
