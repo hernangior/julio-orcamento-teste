@@ -246,6 +246,7 @@
 			let url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmm0nPchYTIJ8_FaRiUVgRXb0a9Sy0jTMWFGfs_F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/pub?gid=0&single=true&output=csv";
 			$.get(url, 
 			function(data, status){
+			  console.log(status);
 			  let i = 1;	
 			  // get all data, separated in lines
 			  var array_list = data.split("\r\n");
@@ -261,49 +262,13 @@
 			  document.getElementById("ajax_result").innerText = data
 			});
 			
-		/*
-			var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmm0nPchYTIJ8_FaRiUVgRXb0a9Sy0jTMWFGfs_F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/pub?gid=0&single=true&output=csv";
-
-            $.ajax({
-                type: "GET",
-                cache: false,
-                url: url,
-                dataType: 'json',
-                crossDomain: true,
-                headers: { 'Access-Control-Allow-Origin': "*"},
-                success: function(data, status) {
-                    // Success message
-					
-					console.log('sucessfully received!');
-					console.table(data);
-
-                },
-                error: function(error) {
-                    if ((!error.responseText) && (!error.status)){
-                        console.log('sucessfully received with warnings!');
-						console.table(error);
-                    }else{
-                        // Fail message
-						console.log('filed to receive...');
-                    }
-                },
-            })
-			*/
-		
-			/*
-			$.ajax("https://docs.google.com/spreadsheets/d/e/2PACX-1vTmm0nPchYTIJ8_FaRiUVgRXb0a9Sy0jTMWFGfs_F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/pub?gid=0&single=true&output=csv").done(function(result){
-				document.getElementById('ajax_result').innerHTML = result;
-			});
-			*/
-		}
-	  
 		function test(){
-		
+			// list of fields
 			var name = "NAME";
 			var email = "EMAIL";
 			var message = "MESSAGE";
 			var firstName = "FIRST NAME";
-		
+			// ajax for send request
             $.ajax({
                 type: "POST",
                 data: {
@@ -326,8 +291,6 @@
                     }
                 },
             })
-		
-			console.log('test');
 		}
 	  </script>
 	  
