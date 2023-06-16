@@ -246,6 +246,7 @@
 			let url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmm0nPchYTIJ8_FaRiUVgRXb0a9Sy0jTMWFGfs_F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/pub?gid=0&single=true&output=csv";
 			$.get(url, 
 			function(data, status){
+			  console.log(status);
 			  let i = 1;	
 			  // get all data, separated in lines
 			  var array_list = data.split("\r\n");
