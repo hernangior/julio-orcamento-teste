@@ -245,24 +245,18 @@
 		function getData(){
 		
 			$.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vTmm0nPchYTIJ8_FaRiUVgRXb0a9Sy0jTMWFGfs_F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/pub?gid=0&single=true&output=csv", 
+			let i = 1;
 			function(data, status){
-			
-			  //alert("Data: " + data + "\nStatus: " + status);
-			  console.log("# original value: ");
-			  console.log(data);
-			  console.log("# original value in table: ");
-			  console.table(data);
-			  console.log("# value in JSON");
-			  console.log(JSON.stringify(data));
-			  console.log("size: "+data.length);
-			  console.log("#array: ");
-			  
+			  console.log("# line "+i+" ... ");i++;
+			  // get all data, separated in lines
 			  var array_list = data.split("\r\n");
-			  //console.table(array_list);
-			
+			  // search line by line e breaks fields
 			  array_list.forEach((item) => {
+			    // when the fields are breakeds
 				var item_list = item.split(",");
-				console.table(item_list);
+				item_list.forEach((item_) => {
+					console.table(item_);
+				});
 			  });
 			  
 			  document.getElementById("ajax_result").innerText = data
