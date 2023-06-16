@@ -59,7 +59,7 @@
   <main>
     <div class="py-5 text-center">
       <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-      <h2>Budget Test - Deplo data: 16/06/2023 12:52</h2>
+      <h2>Budget Test - Deplo data: 16/06/2023 12:56 - split</h2>
       <p class="lead">Feature presentation feature, under development, just for quick testing. Google Sheets - for storing and querying the data</p>
     </div>
 
@@ -251,6 +251,10 @@
 			  console.log("# value in JSON");
 			  console.log(JSON.stringify(data));
 			  console.log("size: "+data.length);
+			  console.log("#array: ");
+			  
+			  var array_list = data.split("\r\n");
+			  console.table(array_list);
 			
 			  //alert("Data: " + data + "\nStatus: " + status);
 			  
