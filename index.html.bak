@@ -283,7 +283,10 @@
                     "entry.1129926948": message,
                 },
                 cache: false,
-                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScSb0xiEF75ZZwf9WGCbX6OSu6uhuM6LqP-iYrmbMaHjate-Q/formResponse",
+                url: 
+				"https://docs.google.com/forms/u/0/d/e/"+
+				"1FAIpQLScSb0xiEF75ZZwf9WGCbX6OSu6uhuM6LqP-iYrmbMaHjate-Q"+
+				"/formResponse",
                 success: function() {
                     // Success section
 					console.log('sucessfully send!');
