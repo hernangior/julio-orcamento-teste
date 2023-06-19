@@ -61,7 +61,7 @@
       <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
       <h2>Budget Test</h2>
 	  <div id="div_deploy_data">
-		 &nbsp; - Deploy date: 19/06/2023 08:56 - message aditional
+		 &nbsp; - Deploy date: 19/06/2023 08:56 - success
 	  </div>
       <p class="lead">Feature presentation feature, under development, just for quick testing. Google Sheets - for storing and querying the data</p>
     </div>
@@ -241,7 +241,11 @@
 	  <script>
 	  
 		function getData(){
-			let url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmm0nPchYTIJ8_FaRiUVgRXb0a9Sy0jTMWFGfs_F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/pub?gid=0&single=true&output=csv";
+			let url = "https://docs.google.com/spreadsheets/d/e/"+
+			"2PACX-1vTmm0nPchYTIJ8_"+
+			"FaRiUVgRXb0a9Sy0jTMWFGfs_"+
+			"F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/"+
+			"pub?gid=0&single=true&output=csv";
 			$.get(url, 
 			function(data, status){
 			  if (status == "success"){
@@ -280,14 +284,15 @@
                 cache: false,
                 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScSb0xiEF75ZZwf9WGCbX6OSu6uhuM6LqP-iYrmbMaHjate-Q/formResponse",
                 success: function() {
-                    // Success message
+                    // Success section
 					console.log('sucessfully send!');
                 },
                 error: function(error) {
                     if ((!error.responseText) && (!error.status)){
+						// Success section
                         console.log('sucessfully send!');
                     }else{
-                        // Fail message
+                        // Fail section
 						console.log('filed to send...');
                     }
                 },
