@@ -241,7 +241,8 @@
 	  <script>
 	  
 		function getData(){
-			let url = "https://docs.google.com/spreadsheets/d/e/"+
+			let url = 
+			"https://docs.google.com/spreadsheets/d/e/"+
 			"2PACX-1vTmm0nPchYTIJ8_"+
 			"FaRiUVgRXb0a9Sy0jTMWFGfs_"+
 			"F8o30bM1OD7a1_Z8Ra62BP6B1U50e35HSiZD3Wa/"+
